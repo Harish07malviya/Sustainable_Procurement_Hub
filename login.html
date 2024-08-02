@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login_pg.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form onsubmit="return check(this);">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="uname" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="pswd" required>
+                </div>
+                <button type="submit">Login</button>
+                <p class="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+    <script language="javascript">
+        function check(form) {
+            if (form.uname.value == "harish@gmail.com" && form.pswd.value == "12345") {
+                window.open('index.html', "_self");
+                return false; // Prevent form submission
+            } else {
+                alert("Error Password or Username");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
